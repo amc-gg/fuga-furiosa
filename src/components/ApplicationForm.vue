@@ -45,7 +45,7 @@
         Message: ${this.form.message}
       `;
       const subject = 'Inscription';
-      window.location.href = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = `mailto:fugafuriosaparis@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
     },
   },
   };

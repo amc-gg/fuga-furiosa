@@ -33,27 +33,17 @@
       };
     },
     methods: {
-      async submitForm() {
-        try {
-          const response = await fetch('http://localhost:3001/send-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(this.form),
-          });
-  
-          if (response.ok) {
-            alert('Message sent successfully!');
-          } else {
-            alert('Failed to send message.');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-          alert('Error sending message.');
-        }
-      },
+      submitForm() {
+      const emailBody = `
+        Nom: ${this.form.name}\n
+        Email: ${this.form.email}\n
+        Instrument: ${this.form.instrument}\n
+        Message: ${this.form.message}
+      `;
+      const subject = 'Contact';
+      window.location.href = `mailto:fugafuriosaparis@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
     },
+  }
   };
   </script>
   
