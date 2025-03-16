@@ -15,25 +15,8 @@ export default {
   name: 'ImageCarousel',
   data() {
     return {
-      images: [
-        require("@/assets/images/gallery/IMG-20241116-WA0000.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0001.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0002.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0003.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0004.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0005.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0006.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0007.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0008.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0009.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0010.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0011.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0012.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0013.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0014.jpg"),
-        require("@/assets/images/gallery/IMG-20241116-WA0015.jpg")
-      ],
-      currentIndex: 0,
+      images: [],
+      currentIndex: 0, // Ensure currentIndex is defined
     };
   },
   computed: {
@@ -43,17 +26,24 @@ export default {
   },
   methods: {
     changeSlide(direction) {
-      const totalItems = this.images.length;
-      this.currentIndex = (this.currentIndex + direction + totalItems) % totalItems;
+    const totalItems = this.images.length;
+    this.currentIndex = (this.currentIndex + direction + totalItems) % totalItems;
     },
-    
+    loadImages() {
+      const context = require.context('@/assets/images/gallery', false, /\.(png|jpe?g|gif|svg)$/i);
+      this.images = context.keys().map(key => context(key));
+      console.log('Loaded images:', this.images);
+    },
     handleKeyup(event) {
       if (event.key === 'ArrowLeft') {
         this.changeSlide(-1);
       } else if (event.key === 'ArrowRight') {
         this.changeSlide(1);
       }
-    }
+  }
+  },
+  created() {
+    this.loadImages();
   },
   mounted() {
     window.addEventListener('keyup', this.handleKeyup);

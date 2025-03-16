@@ -1,6 +1,6 @@
 <template>
     <div class="application-form">
-      <h2>{{ $t('application_form_title') }}</h2>
+      <h2>{{ $t('applicationFormTitle') }}</h2>
       <form @submit.prevent="submitForm">
         <div>
           <label for="name">{{ $t('name') }}:</label>

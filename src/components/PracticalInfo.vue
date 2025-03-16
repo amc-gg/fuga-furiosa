@@ -2,7 +2,7 @@
     <div class="practical-info">
       <section class="rehearsal-info">
         <h2>{{ $t('rehearsal') }}</h2>
-        <p>{{ $t('rehearsal_time') }}</p>
+        <p>{{ $t('rehearsalTime') }}</p>
         <p>Maison des Jeunes de Saint-Médard</p>
         <p>3 Rue du Gril, 75005 Paris</p>
         <div class="map-container">

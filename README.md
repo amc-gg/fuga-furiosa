@@ -9,6 +9,8 @@ npm add @vue-email/render @vue-email/components
 npm install vue-i18n@next
 <!-- npm install express nodemailer body-parser cors -->
 npm install --save @fortawesome/free-brands-svg-icons
+npm install file-loader --save-dev
+
 ```
 
 ### Compiles and hot-reloads for development

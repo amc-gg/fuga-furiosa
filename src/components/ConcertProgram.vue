@@ -1,15 +1,15 @@
 <template>
     <div class="concert-program">
-      <h2>{{ $t('come_and_see_us')}}</h2>
+      <h2>{{ $t('comeAndSeeUs')}}</h2>
       <div class="container">
-        <div class="date">
-          <p><strong>{{ $t('date') }}:</strong> {{ $t('first_concert_date') }}</p>
-          <p><strong>{{ $t('time') }}:</strong> {{ $t('first_concert_time') }}</p>
+        <div class="performance">
+          <p><strong>{{ $t('date') }}:</strong> {{ $t('firstConcertDate') }}</p>
+          <p><strong>{{ $t('time') }}:</strong> {{ $t('firstConcertTime') }}</p>
           <p><strong>{{ $t('venue') }}:</strong> Eglise Notre-Dame du Travail</p>
         </div>
-        <div class="date">
-          <p><strong>{{ $t('date') }}:</strong> {{ $t('second_concert_date') }}</p>
-          <p><strong>{{ $t('time') }}:</strong> {{ $t('second_concert_time') }}</p>
+        <div class="performance">
+          <p><strong>{{ $t('date') }}:</strong> {{ $t('secondConcertDate') }}</p>
+          <p><strong>{{ $t('time') }}:</strong> {{ $t('secondConcertTime') }}</p>
           <p><strong>{{ $t('venue') }}:</strong> Eglise Notre-Dame du Travail</p>
         </div>
       </div>
@@ -33,10 +33,11 @@
     display: flex;
   }
 
-  .date {
+  .performance {
   flex: 1;
   padding: 20px;
   margin-left:5px;
+  border: solid white;
   }
 
   .concert-program {
