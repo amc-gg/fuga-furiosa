@@ -46,13 +46,14 @@ export default {
 
   .icon-container {
   position: absolute;
-  left: 1em;
+  left: 0px;
   top: 50%;
+  width: 10%; /* Adjust the size as needed */
   transform: translateY(-50%);
 }
 
 .orchestra-icon {
-  width: 110px; /* Adjust the size as needed */
+  width: 100%; /* Adjust the size as needed */
   height: auto;
 }
 

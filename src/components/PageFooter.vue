@@ -20,7 +20,8 @@
     width: 100%;
     height: 5%;
     bottom: 0;
-    margin-top: 10px; /* Add space above the footer */
+    /* margin-top: 10px; Add space above the footer */
+    /* margin-top: 0% */
   }
   </style>
   

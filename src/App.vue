@@ -37,8 +37,9 @@
   main {
     flex: 1;
     box-sizing: border-box;
-    padding: 50px 20px 100px; /* Increase bottom padding to ensure content is not hidden */
-    padding: 150px 20px 100px; /* Adjust top padding to account for the fixed header height */
+    /* padding: 50px 20px 100px; Increase bottom padding to ensure content is not hidden */
+    /* padding: 150px 20px 100px; Adjust top padding to account for the fixed header height */
+    padding: 10% 2% 2%;
 
   }
   </style>
