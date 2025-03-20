@@ -1,4 +1,4 @@
-# vue-website
+# fuga-furiosa
 
 ## Project setup
 ```
