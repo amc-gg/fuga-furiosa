@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="icon-container">
-        <img src="@/assets/images/icons/cropped_logo.png" alt="Orchestra Icon" class="orchestra-icon" />
+        <img src="@/assets/images/icons/logo.jpg" alt="Orchestra Icon" class="orchestra-icon" />
     </div>
     <h1>Fuga Furiosa</h1>
     <nav>
