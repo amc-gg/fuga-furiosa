@@ -65,7 +65,7 @@ const messages = {
 
     // Concert page
     concertProgram: 'Prochain Concerts',
-    venue: 'Salle',
+    venue: 'Lieu',
     firstConcertDate: '28 juin 2025',
     firstConcertTime: '19h00',
     secondConcertDate: '29 juin 2025',
