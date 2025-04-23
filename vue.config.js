@@ -3,7 +3,7 @@
 //   transpileDependencies: true
 // })
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/fuga-furiosa" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
   chainWebpack: config => {
     config.module
       .rule('images')
